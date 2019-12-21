@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Polaroid your Pic</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script   src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="formsStyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+        <script src="forms.js" defer></script>
+    </head>
+    <body>
+        
+        <h1>Display Your Image Polaroid Style!</h1>
+            <div id="image">
+                <img id="image2" src="https://st2.depositphotos.com/1007905/8385/i/950/depositphotos_83857430-stock-photo-vintage-styled-santorini.jpg">
+                <span id="text-description">Santorini, Greece</span>
+            </div>
+    
+            <form class="new-image">
+                <label  id="image-url">Input your new image URL here: </label>
+                <input type="text" id="image-url2" placeholder="URL here" required>
+    
+                <br>
+    
+                <label id="image-desc">Input your new description here: </label>
+                <input type="text" id="image-desc2" placeholder="New description here" required>
+    
+                <br>
+    
+                <input type="submit" id="button">
+            </form> 
+
+            <div class="img-buttons">
+                <button onclick="previousImg()" id="previous-img">Previous</button>
+                <button onclick="nextImg()" id="next-img">Next</button> 
+            </div>
+    
+            <input onclick="darkMode()" type="button" value="Dark Mode" id="mode-button"></input>
+            <button id="target">Test Button</button>
+    </body>
+</html>
