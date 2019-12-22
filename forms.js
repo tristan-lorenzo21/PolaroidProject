@@ -14,29 +14,32 @@ let desc = document.getElementById("text-description");
 let imgInput = document.getElementById("image-url2");
 let descInput = document.getElementById("image-desc2");
 
-let PictureObj = {
-    link: imgInput.value,
-    name: descInput.value
-}
+let comValidator = imgInput.value.includes(".com");
+let netValidator= imgInput.value.includes(".net");
 
 document.getElementById("button").addEventListener("click", function(event){
     event.preventDefault();
 
-    img.setAttribute("src", newImg.value)
+    img.setAttribute("src", newImg.value);
     desc.innerHTML = newDesc.value;
 
-    let urlValidator = imgInput.value.includes(".com");
-
-    if (imgInput.value.length === 0 || descInput.value.length === 0 || urlValidator === false) {
+    if (imgInput.value.length === 0 || descInput.value.length === 0 || comValidator === true || netValidator === true) {
         img.setAttribute("src", greece);
         desc.innerHTML = "Santorini, Greece";
 
         alert("You need to input a new image and description")
     } 
+    
+    let PictureObj = {
+        link: imgInput.value,
+        name: descInput.value
+    }
 
     objArray.push(PictureObj);
 
     log(objArray);
+
+    counter == objArray.length - 1;
 })
 
 function darkMode() {
@@ -59,8 +62,8 @@ function darkMode() {
 }
 
 function nextImg () {
-    if(counter == objArray.length) {
-        counter -= 1
+    if(counter == objArray.length - 1) {
+        counter = objArray.length - 1
     } else {
         counter++
     }
@@ -85,5 +88,8 @@ function previousImg() {
 }
 
 $("#target").click(function() {
-    alert("What's up!")
+    objArray.length = 0;
+
+    img.setAttribute("src", greece);
+    desc.innerHTML = "Santorini, Greece";
 }) 
