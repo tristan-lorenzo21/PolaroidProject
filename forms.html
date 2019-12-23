@@ -24,25 +24,25 @@
             </div>
     
             <form class="new-image">
-                <label  id="image-url">Input your new image URL here: </label>
+                <label  id="image-url"></label>
                 <input type="text" id="image-url2" placeholder="URL here" required>
     
                 <br>
     
-                <label id="image-desc">Input your new description here: </label>
+                <label id="image-desc"></label>
                 <input type="text" id="image-desc2" placeholder="New description here" required>
     
                 <br>
     
-                <input type="submit" id="button">
+                <input class= "main-buttons" type="submit" id="submit-button">
             </form> 
 
             <div class="img-buttons">
-                <button onclick="previousImg()" id="previous-img">Previous</button>
-                <button onclick="nextImg()" id="next-img">Next</button> 
+                <button onclick="previousImg()" class ="toggle-buttons" id = "previous-img">Previous</button>
+                <button onclick="nextImg()" class ="toggle-buttons" id="next-img">Next</button> 
             </div>
     
-            <input onclick="darkMode()" type="button" value="Dark Mode" id="mode-button"></input>
-            <button id="target">Clear Pictures</button>
+            <input class= "main-buttons" onclick="darkMode()" type="button" value="Dark Mode" id="mode-button"></input>
+            <button id="target">Clear</button>
     </body>
 </html>

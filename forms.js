@@ -17,7 +17,7 @@ let descInput = document.getElementById("image-desc2");
 let comValidator = imgInput.value.includes(".com");
 let netValidator= imgInput.value.includes(".net");
 
-document.getElementById("button").addEventListener("click", function(event){
+document.getElementById("submit-button").addEventListener("click", function(event){
     event.preventDefault();
 
     img.setAttribute("src", newImg.value);
@@ -48,16 +48,20 @@ function darkMode() {
     let elem = document.getElementById("mode-button");
 
     if(state === 0){
-        document.body.style.background = "#353C51";
+        document.body.style.background = "#494949";
         state = 1;
         elem.value = "Light Mode";
         document.body.style.color = "white";
-        document.getElementById("text-description").style.color = "black"
+        document.getElementById("text-description").style.color = "black";
+        document.getElementById("submit-button").style.background = "white";
+        document.getElementById("submit-button").style.color = "#494949";
     }else{
         document.body.style.background = "initial";
         state = 0;
         elem.value = "Dark Mode";
         document.body.style.color = "initial"
+        document.getElementById("submit-button").style.background = "#494949";
+        document.getElementById("submit-button").style.color = "white";
     }
 }
 
