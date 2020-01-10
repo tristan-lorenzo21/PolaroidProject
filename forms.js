@@ -97,3 +97,7 @@ $("#target").click(function() {
     img.setAttribute("src", greece);
     desc.innerHTML = "Santorini, Greece";
 }) 
+
+function helloWorld() {
+    log("Hello World!");
+}
