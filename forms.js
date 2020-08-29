@@ -47,7 +47,7 @@ function darkMode() {
 
     let elem = document.getElementById("mode-button");
 
-    if(state === 0){
+    if(state == 0){
         document.body.style.background = "#494949";
         state = 1;
         elem.value = "Light Mode";
